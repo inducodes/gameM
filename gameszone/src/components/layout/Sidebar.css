@@ -1,0 +1,122 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  z-index: 100;
+  color: var(--sidebar-text);
+  border-right: 1px solid var(--card-border);
+  box-shadow: 4px 0 24px rgba(0,0,0,0.02);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo-icon {
+  background: var(--color-primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.sidebar-logo span {
+  font-size: 0.75rem;
+  color: var(--sidebar-text);
+  font-weight: 400;
+}
+
+.sidebar-logo-img {
+  width: 120px;
+  height: auto;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.sidebar-logo-img.collapsed {
+  max-width: 40px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  color: var(--sidebar-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.nav-item:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: white;
+  transform: translateX(4px);
+}
+
+[data-theme='light'] .nav-item:hover {
+  background-color: rgba(0,0,0,0.03);
+  color: var(--color-primary);
+}
+
+.nav-item.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-glow);
+  transform: translateX(4px);
+}
+
+.sidebar-promo {
+  margin-top: auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(90, 92, 229, 0.15) 0%, transparent 70%);
+  position: relative;
+}
+
+.promo-icon {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(90, 92, 229, 0.5));
+}
+
+.sidebar-promo h4 {
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.sidebar-promo p {
+  color: var(--sidebar-text);
+  font-size: 0.8rem;
+  margin: 0;
+}

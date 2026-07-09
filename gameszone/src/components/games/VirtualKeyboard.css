@@ -1,0 +1,96 @@
+.virtual-keyboard-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.virtual-keyboard {
+  background-color: #f0edec;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.keyboard-key {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Key Sizes */
+.keyboard-key.medium {
+  width: 66px;
+}
+
+.keyboard-key.large {
+  width: 80px;
+}
+
+.keyboard-key.xlarge {
+  width: 100px;
+}
+
+.keyboard-key.space {
+  width: 280px;
+}
+
+/* Key Colors */
+.pinky-left { background-color: #aed581; }
+.ring-left { background-color: #dce775; }
+.middle-left { background-color: #ffb74d; }
+.index-left { background-color: #80cbc4; }
+.thumb { background-color: #ef5350; }
+.index-right { background-color: #f48fb1; }
+.middle-right { background-color: #ffca28; }
+.ring-right { background-color: #cddc39; }
+.pinky-right { background-color: #81c784; }
+
+/* Highlight Circle */
+.keyboard-key.highlight .highlight-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border: 3px solid #42a5f5;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: rgba(66, 165, 245, 0.2);
+}
+
+/* Homing bumps */
+.key-bump {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.key-label {
+  z-index: 1;
+}
