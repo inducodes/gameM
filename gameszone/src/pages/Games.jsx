@@ -62,7 +62,7 @@ const gamesList = [
     mode: 'Single Player',
     difficulty: 'Hard',
     reward: '120 XP',
-    path: '#'
+    path: '/games/sudoku'
   }
 ];
 

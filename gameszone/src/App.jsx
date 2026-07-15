@@ -12,6 +12,7 @@ import SqlChallenge from './pages/games/SqlChallenge';
 import PythonQuiz from './pages/games/PythonQuiz';
 import TypingPractice from './pages/games/TypingPractice';
 import TicTacToe from './pages/games/TicTacToe';
+import SudokuGame from './pages/games/SudokuGame';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="games/python" element={<PythonQuiz />} />
           <Route path="games/typing" element={<TypingPractice />} />
           <Route path="games/tictactoe" element={<TicTacToe />} />
+          <Route path="games/sudoku" element={<SudokuGame />} />
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="achievements" element={<Achievements />} />
           <Route path="history" element={<History />} />
